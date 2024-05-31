@@ -26,6 +26,21 @@ namespace PermDynamics_Galkin
         {
             InitializeComponent();
             mainWindow = this;
+            OpenPages(new pages());
+        }
+        public enum pages
+        {
+            main,chart
+        }
+
+        public void OpenPages(pages _pages)
+        {
+            if (_pages == pages.main)
+                frame.Navigate(new Pages.Main(this));
+            else if (_pages == pages.chart)
+            {
+                frame.Navigate(new Pages.Chart(this));
+            }
         }
     }
 }

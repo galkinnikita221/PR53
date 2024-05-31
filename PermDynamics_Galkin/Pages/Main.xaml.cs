@@ -20,7 +20,8 @@ namespace PermDynamics_Galkin.Pages
     /// </summary>
     public partial class Main : Page
     {
-        public Main()
+        public MainWindow mainWindow;
+        public Main(MainWindow mainWindow)
         {
             InitializeComponent();
         }
